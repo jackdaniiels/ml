@@ -20,6 +20,7 @@ export const ProductListPage = ({ history }) => {
                         <ProductItem 
                             history={history}
                             id={ item.id }
+                            transport={ item.transport }
                             key={ item.id }
                             price={ item.price.amount } 
                             productName={ item.title } 

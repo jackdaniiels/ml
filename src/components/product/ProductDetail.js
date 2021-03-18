@@ -24,12 +24,12 @@ export const ProductDetail = ( { product } ) => {
          <div className="product__card">
             <div className="product__card-content">
                 <div className="product__card-img">
-                  <img src={ result?.picture } alt={ result?.title } />
+                  <img src={ result?.picture } alt={ result?.title } loading="lazy" alt={ result?.title } />
                 </div>
                 <div className="product__card-cta">
                   <p> { sellInformation(result?.condition, result?.sold_quantity) } </p>
                   <h3> { result?.title } </h3>
-                  <h1> { formatterPeso.format(result?.price) } </h1>
+                  <h1> { formatterPeso.format(result?.price) } <span>00</span></h1>
                   <Button text={'Comprar'} btnClass={'base__button-primary'} type={'button'}/>
                 </div>
             </div>

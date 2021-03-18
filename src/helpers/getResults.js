@@ -22,6 +22,7 @@ export const getResults = async (item) => {
                 id: result.id,
                 title: result.title,
                 city: result.seller_address.city.name,
+                transport: result?.use_thumbnail_id,
                 price: {
                     currency: result.currency_id,
                     amount: result.price,

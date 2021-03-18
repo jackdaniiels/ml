@@ -5,11 +5,13 @@ import { useForm } from '../../hooks/useForm';
 import { useLocation } from 'react-router-dom';
 import { SearchContext } from '../.././context/SearchContext';
 import { getResults } from '../.././helpers/getResults';
+import { IdContext } from '../../context/IdContext';
 
 export const Search = ({ history }) => {
 
     const location = useLocation();
     const { setDataResults } = useContext(SearchContext);
+    const { setId } = useContext(IdContext);
     const { search = '' } = queryString.parse(location.search);
     const [ formValues, handleInputChange ] = useForm( { searchText: '' } );
     const { searchText } = formValues;
@@ -27,6 +29,8 @@ export const Search = ({ history }) => {
         getResults(search).then(results => {
             results = results.filter((result, idx) => idx < 4);
             setDataResults(results);
+            const idSelected = results[0]?.item.id;
+            setId(idSelected);
         });
     }, [search, setDataResults]);
     
@@ -44,7 +48,7 @@ export const Search = ({ history }) => {
                            aria-label="search" 
                            aria-describedby="button-search"/>
                     <button className="nav__btn nav__btn-outline-secondary" type="submit" id="button-search">
-                        <img src={ iconSearch } width="20" height="20" alt="icon-search"/>
+                        <img src={ iconSearch } width="20" height="20" loading="lazy" alt="icon-search"/>
                     </button>
                 </div>
             </form>
