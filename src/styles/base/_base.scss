@@ -1,0 +1,21 @@
+@import '../mixins/button';
+
+* {
+    margin: 0px;
+    outline: 0px;
+    box-sizing: border-box;
+    font-family: Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+}
+
+body {
+    background: $gray;
+}
+
+.base__button-primary {
+    @include button ($info, $white);
+    &:hover {
+        @include button-hover ($info-hover);
+    }
+}
+
+

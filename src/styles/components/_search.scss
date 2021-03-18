@@ -1,0 +1,65 @@
+.nav__input-group>.form-control {
+    flex: 1 1 auto;
+    position: relative;
+    min-width: 0;
+    width: 1%;
+}
+
+.nav__btn {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0rem .25rem .25rem 0rem;
+    color: #212529;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: .375rem .75rem;
+    text-align: center;
+    text-decoration: none;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    user-select: none;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.nav__btn-outline-secondary {
+    background-color: $gray;
+    color: #6c757d;
+    width: 50px;
+
+    img {
+        margin-top: 5px;
+    }
+}
+
+
+.nav__form-search {
+    grid-row: row 1;
+}
+
+.nav__input-group {
+    display: grid;
+    grid-template-columns: auto 50px;
+}
+
+.nav__form-control {
+    appearance: none;
+    background-color: #fff;
+    border: none;
+    background-clip: padding-box;
+    border-radius: .25rem 0rem 0rem .25rem;
+    color: #212529;
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: .375rem .75rem;
+    line-height: 1.5;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    width: 100% !important;
+}
+

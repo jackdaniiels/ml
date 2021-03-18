@@ -1,0 +1,126 @@
+@import '../mixins/grid';
+@import '../mixins/breakpoints';
+
+.product__wrapper {
+    column-gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(12, [col] 1fr);
+    grid-template-rows: repeat(1, [row] auto);
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.product__card {
+    background: white;
+    border-radius: .3rem;
+    display: grid;
+    grid-column: col 2 / span 10;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(10, 1fr);
+}
+
+.product__card-content {
+    padding-top: 32px;
+    grid-column: 1 / span 10;
+    display: grid;
+    grid-template-columns: 6fr 4fr;
+
+    @include media-breakpoint-md() {
+        margin-left: 32px;
+        grid-template-columns: 1fr;
+    }
+
+    @include media-breakpoint-sm() {
+        margin-left: 32px;
+        grid-template-columns: 1fr;
+    }
+
+    @include media-breakpoint-xs() {
+        margin-left: 32px;
+        grid-template-columns: 1fr;
+    }
+}
+
+.product__card-img {
+    display: flex;
+    justify-content: center;
+    max-width: 680px;
+
+    img {
+        max-width: 100%;
+    }
+}
+
+
+.product__card-cta {
+    
+    p {
+        font-size: 14px;
+        margin-top: 32px;
+    }
+
+    h3 {
+        padding-top: 16px;
+        font-size: 24px;
+        max-width: 60%;
+    }
+
+    h1 {
+        font-size: 46px;
+        font-weight: 300;
+        padding: 32px 0px;
+    }
+
+}
+
+.product__product_item {
+    display: grid;
+    grid-column: col 2 / span 10;
+    grid-template-rows: repeat(2, auto);
+    grid-template-columns: repeat(10, 1fr);
+    border-bottom: 1px solid $gray;
+    cursor: pointer;
+
+    &:hover {
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(132,132,132,0.39); 
+    box-shadow: 0px 0px 15px 5px rgba(132,132,132,0.39);
+    }
+
+    .product__product-item-img {
+        border-radius: 4px;
+        height: 180px;
+        margin: 16px;
+        overflow: hidden;
+        width: 180px;
+    }
+
+    .product__item-description {
+        grid-column: 2 / 9;
+
+        img {
+            width: 20px;
+            height: 20px;
+            margin-left: 16px;
+        }
+    }
+
+    h1 {
+        font-size: 24px;
+        font-weight: 400;
+        padding-top: 14px;
+    }
+
+    h3 {
+        font-size: 18px;
+        font-weight: 400;
+        padding-top: 32px;
+    }
+
+    .product__city-location {
+        color: $dark-gray;
+        font-size: 18px;
+        font-weight: 400;
+        grid-column: 9 / 11;
+        padding-top: 32px;
+    }
+}

@@ -1,0 +1,22 @@
+@import '../mixins/grid';
+
+.description__wrapper {
+    display: grid;
+    grid-column: 1 / span 10;
+    grid-template-columns: repeat(10, 1fr);
+
+    h1 {
+        font-size: 28px;
+        font-weight: 400;
+        grid-column: 1 / span 10;
+        margin: 32px 0px 32px 32px;
+    }
+
+    p {
+        color: $dark-gray;
+        font-size: 16px;
+        font-weight: 300;
+        grid-column: 1 / span 10;
+        margin: 0px 0px 32px 32px;
+    }
+}

@@ -1,0 +1,39 @@
+@import '../mixins/grid';
+
+.breadcumb__breadcumb-wrapper {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    @include grid;
+}
+
+.breadcumb__breadcumb {
+    display: flex;
+    list-style: none;
+    grid-column: col 2 / span 10;
+    grid-row: row 1;
+    padding-inline-start: 0px;
+}
+
+.breadcumb__list-item+.breadcumb__list-item::before {
+    display: inline-block;
+    padding-right: .5rem;
+    padding-left: .5rem;
+    content: url(../../assets/icons/chevron-right-solid.svg);
+    height: 10px;
+    position: relative;
+    top: 3px;
+    width: 10px;
+}
+
+.breadcumb__link {
+    background-color: transparent;
+    color: $dark-gray;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.breadcumb__active {
+    color: $black;
+    font-size: 14px;
+    font-weight: bold;
+}

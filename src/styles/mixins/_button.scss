@@ -1,0 +1,24 @@
+  @mixin button ($background, $color) {
+        background-color: $background;
+        border-color: transparent;
+        border-radius: 6px;
+        box-shadow: 0 0 0 0 #fff;
+        box-sizing: border-box;
+        color: $color;
+        cursor: pointer;
+        display: inline-block;
+        font-size: 16px;
+        font-weight: 400;
+        grid-column: 1 / span 4;
+        height: 48px;
+        line-height: 48px;
+        padding: 0 24px;
+        transition: .18s ease-out;
+        transition: box-shadow .25s ease-out, background-color .2s ease-out;
+        text-align: center;
+        width: calc(100% - 32px);
+    }
+
+    @mixin button-hover ($background) {
+        background-color: $background;
+    }

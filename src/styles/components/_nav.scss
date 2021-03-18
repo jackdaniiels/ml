@@ -1,0 +1,20 @@
+@import '../mixins/grid';
+
+.nav__navbar {
+    background-color: $primary;
+    @include grid;
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+}
+
+.nav__container {
+    display: grid;
+    grid-column: col 2 / span 10;
+    grid-row: row 1;
+    grid-template-columns: 70px auto;
+}
+
+.nav__logo {
+    grid-row: row 1;
+    padding-top: 4px;
+}
